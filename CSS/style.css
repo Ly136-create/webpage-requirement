@@ -1,0 +1,284 @@
+ /* General Reset */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: 'Montserrat', sans-serif;
+     line-height: 1.6;
+ }
+
+ a {
+     text-decoration: none;
+     color: inherit;
+ }
+
+ /* Colors */
+ :root {
+     --pn-blue: #032649;
+     --pn-orange: #FF6600;
+     --light-bg: #f5f5f5;
+     --dark-text: #333;
+ }
+
+ /* Navbar */
+ nav {
+     background: var(--pn-blue);
+     color: #fff;
+     background-color: #061522;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem 2rem;
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+ }
+
+ nav .logo {
+     font-weight: 700;
+     font-size: 1.5rem;
+ }
+ .logo img{
+    width: 40%;
+    height: 30%;
+ }
+ nav ul {
+     display: flex;
+     gap: 1.5rem;
+     list-style: none;
+ }
+
+ nav ul li {
+     cursor: pointer;
+ }
+
+ nav .menu-toggle {
+     display: none;
+     cursor: pointer;
+ }
+ .page li:hover{
+    color: #ffffffae;
+ }
+
+ /* Header */
+ header {
+     background: url('https://www.passerellesnumeriques.org/wp-content/uploads/2024/06/Country-banner1.png') no-repeat center center/cover;
+     color: #f8f7ff;
+     text-align: center;
+     padding: 6rem 2rem;
+     position: relative;
+ }
+
+ header::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.5);
+ }
+
+ header .content {
+     position: relative;
+     z-index: 1;
+     max-width: 800px;
+     margin: auto;
+ }
+
+ header h1 {
+     font-size: 2.5rem;
+     margin-bottom: 1rem;
+ }
+
+ header p {
+     font-size: 1rem;
+ }
+
+ /* Sections */
+ section {
+     padding: 3rem 2rem;
+ }
+
+ section h2 {
+     text-align: center;
+     color: var(--pn-blue);
+     margin-bottom: 2rem;
+     font-size: 2rem;
+ }
+
+ /* PN Values */
+ .values {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+     gap: 1rem;
+ }
+
+ .card {
+     background: white;
+     padding: 1.5rem;
+     border-radius: 10px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.197); */
+     text-align: center;
+     transition: 0.6s ease;
+ }
+ .card:hover{
+    transform: scale(1.1);
+ }
+
+ .card img {
+     width: 60px;
+     margin-bottom: 1rem;
+     
+ }
+
+ /* Canteen */
+ .canteen-images {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 1rem;
+     margin-bottom: 2rem;
+ }
+
+ .canteen-images img {
+     width: 100%;
+     border-radius: 10px;
+     height: 150px;
+     object-fit: cover;
+     transition: 0.6s ease;
+ }
+.canteen-images img:hover{
+    transform: scale(1.1);
+ }
+
+ table {
+     width: 100%;
+     border-collapse: collapse;
+ }
+
+ table,
+ th,
+ td {
+     border: 1px solid #ddd;
+ }
+
+ th,
+ td {
+     padding: 0.75rem;
+     text-align: center;
+ }
+
+ /* Sports */
+ .sports {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 1rem;
+ }
+
+ .sports .card img {
+     width: 100%;
+     height: 150px;
+     object-fit: cover;
+     border-radius: 10px;
+ }
+
+ /* Aerobic */
+ .gallery {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+     gap: 0.5rem;
+ }
+
+ .gallery img {
+     width: 100%;
+     height: 150px;
+     object-fit: cover;
+     border-radius: 8px;
+ }
+
+ /* Contact */
+ form {
+     max-width: 600px;
+     margin: auto;
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+ }
+
+ input,
+ textarea,
+ button {
+     padding: 0.75rem;
+     border-radius: 5px;
+     border: 1px solid #ccc;
+     font-family: inherit;
+ }
+
+ button {
+     background: var(--pn-orange);
+     color: white;
+     border: none;
+     cursor: pointer;
+ }
+
+ /* Map */
+ .map iframe {
+     width: 100%;
+     height: 300px;
+     border: 0;
+ }
+
+ /* Footer */
+ footer {
+     background: var(--pn-blue);
+     color: white;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 1rem;
+     padding: 2rem;
+    
+ }
+
+ footer h3 {
+     margin-bottom: 1rem;
+ }
+
+ footer ul {
+     list-style: none;
+ }
+
+ footer ul li {
+     margin-bottom: 0.5rem;
+ }
+
+ /* Responsive */
+ @media(max-width:768px) {
+     nav ul {
+         display: none;
+         flex-direction: column;
+         background: var(--pn-blue);
+         position: absolute;
+         top: 60px;
+         right: 0;
+         width: 200px;
+         padding: 1rem;
+     }
+
+     nav ul.active {
+         display: flex;
+     }
+
+     nav .menu-toggle {
+         display: block;
+     }
+ }
+
+  @media(max-width:428px) {
+    footer{
+        text-align: center;
+    }
+  }
